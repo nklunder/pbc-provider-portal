@@ -1,0 +1,22 @@
+#logo { background-image: url("http://www.premeraux.com/img/logo_pbc.png") !important; }
+/*============================================================================*/
+
+/* Color dots for article types */
+[class^="news-type-"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 50%;
+  vertical-align: middle; }
+.news-type-1 { background-color: #444C5C; }
+.news-type-2 { background-color: #CE5A57; }
+.news-type-3 { background-color: #78A5A3; }
+.news-type-4 { background-color: #E1B16A; }
+
+/* Hover effects for share & download links */
+.icon-download:hover,
+.icon-share:hover {
+  cursor: pointer;
+  color: #F26721;
+}
