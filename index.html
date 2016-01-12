@@ -127,8 +127,40 @@
                 </div>
               </form>
 
-              <ul class="list-unstyled" id="prospective-search-results">
-              </ul>
+              <div class="table-responsive" id="prospective-search-results">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Pre-service review requirement</th>
+                      </tr>
+                    </thead>
+                    <tr>
+                      <td>0004M</td>
+                      <td>Scoliosis, DNA analysis of 53 single nucleotide polymorphisms (SNPs), using saliva, prognostic algorithm reported as a risk score</td>
+                      <td>
+                        <p>Pre-Service Review Recommended</p>
+                        <a tabindex="0" role="button" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="left" data-content="History and physical, family history, clinical documentation supporting testing">Medical Records Request</a>
+                      </td>
+                    <tr>
+                      <td>0006M</td>
+                      <td>Oncology (hepatic), mRNA expression levels of 161 genes, utilizing fresh hepatocellular carcinoma tumor tissue, with alpha-fetoprotein level, algorithm reported as a risk classifier</td>
+                      <td>
+                        <p>Pre-Service Review Recommended where description of service is available, otherwise Retrospective Medical Review Required</p>
+                        <a tabindex="0" role="button" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="left" data-content="History and physical, family history, clinical documentation supporting testing">Medical Records Request</a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>0007M</td>
+                      <td>Oncology (gastrointestinal neuroendocrine tumors), real-time PCR expression analysis of 51 genes, utilizing whole peripheral blood, algorithm reported as a nomogram of tumor disease index</td>
+                      <td>
+                        <p>Prior Authorization Required</p>
+                        <a tabindex="0" role="button" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="left" data-content="History and physical, family history, clinical documentation supporting testing">Medical Records Request</a>
+                      </td>
+                    </tr>
+                  </table>
+              </div>
             </div>
           </div>
         </div>
@@ -660,6 +692,36 @@
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
+
+
+
+<template id="prospective-table">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Description</th>
+        <th>Pre-service review requirement</th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+</template>
+
+<template id="prospective-table-row">
+  <tr>
+    <td></td>
+    <td></td>
+    <td>
+      <p></p>
+      <a tabindex="0" role="button" data-trigger="focus" data-container="body" data-toggle="popover" data-placement="left" data-content=""></a>
+    </td>
+  </tr>
+</template>
+
+
 </body>
 
 </html>

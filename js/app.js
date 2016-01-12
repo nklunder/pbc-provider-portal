@@ -1,4 +1,7 @@
 /* jshint esnext: true */
+$(function () {
+  $('[data-toggle="popover"]').popover();
+});
 
 (function() {
   'use strict';
@@ -20,16 +23,21 @@
         searchValue   = new RegExp(`${userInput}`, 'gi'),
         category      = containsDigit.test(userInput) ? "claimCode" : "desc";
 
-    return services.filter(function (service) {
-      return searchValue.test(service[category]);
-    });
+    return services.filter(service => searchValue.test(service[category]));
   }
 
-  function renderResults(arr) {
-    var resultsList = document.getElementById('prospective-search-results');
-    resultsList.innerHTML = arr;
+  function renderResults(services) {
+    var container = document.getElementById('prospective-search-results');
+    var table = document.getElementById('prospective-table').content;
+    var row = document.getElementById('prospective-table-row');
+
+    services.forEach(service => {
+      console.dir(service);
+    });
+
+    container.appendChild(table);
   }
-  
+
 }());
 
 
