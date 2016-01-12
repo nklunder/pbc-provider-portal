@@ -42,7 +42,7 @@
       tableClone.querySelector('tbody').appendChild(rowClone);
     });
 
-    container.innerHTML = "";
+    container.innerHTML = '';
     container.appendChild(tableClone);
 
     $('[data-toggle="popover"]').popover();

@@ -109,6 +109,9 @@
             <span class="icon-info"></span> Premera provider website will be unavailable from 12:00 am to 8:00 am on 2/14/2016.
           </div>
         </div>
+        <div class="col-sm-4">
+          <p class="text-right"><strong>Current EFT status: </strong><a href="#" class="btn btn-default btn-sm">OFF</a></p>
+        </div>
       </div>
 
       <div class="row">
@@ -116,18 +119,17 @@
 
           <div class="panel panel-default">
             <div class="panel-heading">
-              <h3 class="panel-title">Eligibility &amp; Benefits</h3>
+              <h3 class="panel-title">Eligibility &amp; Benefits &ndash; Last 5 Searches</h3>
             </div>
             <div class="panel-body">
               <ul class="list-unstyled">
                 <li><a href="#">Davis, Jennifer</a></li>
+                <li><a href="#">Johnson, Kyle</a></li>
+                <li><a href="#">Keller, Mark</a></li>
+                <li><a href="#">Maurer, Richard</a></li>
+                <li><a href="#">Bourgeois, Cleo</a></li>
               </ul>
-              <form action="" class="form-inline">
-                <input type="text" class="form-control" placeholder="member ID">
-                <input type="text" class="form-control" placeholder="date of birth">
-                <button type="submit" class="btn btn-primary">Search</button>
-              </form>
-              <p><a href="#">&plus; Search for another member</a></p>
+              <a href="" class="btn btn-default">Claims &amp; Eligibility Tool</a>
             </div>
           </div>
           <div class="panel panel-default">
@@ -135,7 +137,8 @@
               <h3 class="panel-title">Prospective Review</h3>
             </div>
             <div class="panel-body">
-              <form class="form-inline" id="prospective-review-form">
+              <h4>Prospective Review Quick Search</h4>
+              <form class="form-inline padding-bottom" id="prospective-review-form">
                 <div class="input-group">
                   <input type="text" class="form-control" name="prospectiveSearchInput" placeholder="procedure or code">
                   <div class="input-group-btn">
@@ -143,9 +146,16 @@
                   </div>
                 </div>
               </form>
-
+              <a href="" class="btn btn-default">Prospective Review Tool</a>
               <div class="table-responsive" id="prospective-search-results">
               </div>
+
+              <h4>Submited Reviews</h4>
+              <ul class="list-group">
+                <li class="list-group-item"><a href="#">Keller, Mark</a> <span class="label label-success">approved</span></li>
+                <li class="list-group-item"><a href="#">Maurer, Richard</a> <span class="label label-warning">additional info needed</span></li>
+                <li class="list-group-item"><a href="#">Bourgeois, Cleo</a> <span class="label label-danger">declined</span></li>
+              </ul>
             </div>
           </div>
 
@@ -211,62 +221,7 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="col-sm-4">
 
-          <div class="panel panel-default">
-            <div class="panel-heading">
-             <h3 class="panel-title">Claims &amp; Payments</h3>
-           </div>
-            <div class="panel-body">
-              <h4>Bookmarked claims</h4>
-              <ul class="list-group padding-bottom">
-                <li class="list-group-item"><a href="">Davis, Jennifer</a><button class="btn btn-default btn-xs pull-right">&times;</button></li>
-                <li class="list-group-item"><a href="">Johnson, Kyle</a><button class="btn btn-default btn-xs pull-right">&times;</button></li>
-                <li class="list-group-item"><a href="">Keller, Mark</a><button class="btn btn-default btn-xs pull-right">&times;</button></li>
-              </ul>
-
-              <h4>Recent EOP statements</h4>
-              <ul class="unstyled">
-                <li>01/02/2016 - Primary Care</li>
-                <li>12/31/2015 - Primary Care</li>
-                <li>12/26/2015 - Primary Care</li>
-                <li>12/19/2015 - Primary Care</li>
-                <li><a href="">My EOPs</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Common Forms</h3>
-            </div>
-            <div class="panel-body">
-              <ul class="list-unstyled">
-                <li>Important form 1 <span class="pull-right icon icon-download"></span></li>
-                <li>Important form 2 <span class="pull-right icon icon-download"></span></li>
-                <li>Important form 3 <span class="pull-right icon icon-download"></span></li>
-              </ul>
-              <p><a fref="">View All Forms</a></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-
-
-
-      <div class="row">
-        <div class="col-xs-12">
-
-
-
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-8"> <!-- TOOLS PANEL -->
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title">tools</h3>
@@ -316,8 +271,49 @@
               </div>
             </div>
           </div>
+
         </div>
-        <div class="col-sm-4"> <!-- EMAIL MANAGEMENT PANEL -->
+        <div class="col-sm-4">
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+             <h3 class="panel-title">Claims &amp; Payments</h3>
+           </div>
+            <div class="panel-body">
+              <h4>Bookmarked claims</h4>
+              <ul class="list-group padding-bottom">
+                <li class="list-group-item"><a href="">Davis, Jennifer</a> <span class="label label-success">complete</span><button class="btn btn-default btn-xs pull-right">&times;</button></li>
+                <li class="list-group-item"><a href="">Johnson, Kyle</a> <span class="label label-info">processing</span><button class="btn btn-default btn-xs pull-right">&times;</button></li>
+                <li class="list-group-item"><a href="">Keller, Mark</a> <span class="label label-info">processing</span><button class="btn btn-default btn-xs pull-right">&times;</button></li>
+                <p><a class="btn btn-default" href="#">Claims & Payments Tool</a></p>
+              </ul>
+
+
+              <h4>Recent EOP statements</h4>
+              <ul class="unstyled">
+                <li>01/02/2016 - Primary Care</li>
+                <li>12/31/2015 - Primary Care</li>
+                <li>12/26/2015 - Primary Care</li>
+                <li>12/19/2015 - Primary Care</li>
+                <li><a class="btn btn-default" href="#">My EOPs</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Common Forms</h3>
+            </div>
+            <div class="panel-body">
+              <ul class="list-unstyled">
+                <li>Important form 1 <span class="pull-right icon icon-download"></span></li>
+                <li>Important form 2 <span class="pull-right icon icon-download"></span></li>
+                <li>Important form 3 <span class="pull-right icon icon-download"></span></li>
+              </ul>
+              <p><a class="btn btn-default" href="#">View All Forms</a></p>
+            </div>
+          </div>
+
           <div class="panel panel-default">
             <div class="panel-body">
               <h4>Keep up with the latest Premera news</h4>
@@ -325,6 +321,15 @@
               <a href="#" class="btn btn-block btn-primary">Manage Email Subscriptions</a>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8"> <!-- TOOLS PANEL -->
+
+        </div>
+        <div class="col-sm-4"> <!-- EMAIL MANAGEMENT PANEL -->
+
         </div>
       </div>
     </div>
