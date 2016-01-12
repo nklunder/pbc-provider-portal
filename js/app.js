@@ -1,7 +1,4 @@
 /* jshint esnext: true */
-$(function () {
-  $('[data-toggle="popover"]').popover();
-});
 
 (function() {
   'use strict';
@@ -27,15 +24,30 @@ $(function () {
   }
 
   function renderResults(services) {
-    var container = document.getElementById('prospective-search-results');
-    var table = document.getElementById('prospective-table').content;
-    var row = document.getElementById('prospective-table-row');
+    var container = document.getElementById('prospective-search-results'),
+        table = document.getElementById('prospective-table'),
+        tableClone = document.importNode(table.content, true);
+
+
 
     services.forEach(service => {
-      console.dir(service);
+      var row = document.getElementById('prospective-table-row'),
+          td = row.content.querySelectorAll('td');
+
+      td[0].textContent = service.claimCode;
+      td[1].textContent = service.desc;
+      td[2].querySelector('.auth').textContent = service.requirement;
+      td[2].querySelector('.request').setAttribute('data-content', service.request);
+
+      var rowClone = document.importNode(row.content, true);
+
+      tableClone.querySelector('tbody').appendChild(rowClone);
     });
 
-    container.appendChild(table);
+    container.innerHTML = "";
+    container.appendChild(tableClone);
+
+    $('[data-toggle="popover"]').popover();
   }
 
 }());
