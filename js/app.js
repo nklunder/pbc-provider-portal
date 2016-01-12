@@ -28,8 +28,6 @@
         table = document.getElementById('prospective-table'),
         tableClone = document.importNode(table.content, true);
 
-
-
     services.forEach(service => {
       var row = document.getElementById('prospective-table-row'),
           td = row.content.querySelectorAll('td');
